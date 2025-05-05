@@ -1,0 +1,244 @@
+/* glabal  styles */
+:root {
+  --primary-color: #b3907a;
+  --secondary-color: #2c7be5;
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --dark-text: #212529;
+  --light-text: #f8f9fa;
+  --border-radius: 0.375rem;
+  --card-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --hover-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 1.5rem !important;
+}
+
+.stylefont {
+  font-size: 1.5rem !important;
+  color: var(--text-color);
+}
+
+.btn {
+  font-size: 1.5rem !important;
+  padding: 0.5rem 1rem !important;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Navbar  */
+.navbar {
+  background-color: var(--primary-color);
+}
+
+/* Footer  */
+footer {
+  background-color: var(--primary-color);
+  margin-top: auto;
+}
+
+/* Hero section */
+.hero-section {
+  background-image: url("../images/pexels-photo-590493.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  min-height: 500px;
+  position: relative;
+}
+
+.hero-section .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+
+/* Book card styles */
+.book-card {
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+  overflow: hidden;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow) !important;
+}
+
+/* Book cover fallback */
+.book-cover-fallback {
+  background-color: var(--light-bg);
+  width: 100px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Author list styles */
+.list-group-item.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #2569c3;
+  border-color: #2569c3;
+}
+
+.btn-outline-primary {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+/* Animation for search results */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.book-card,
+.col {
+  animation: fadeIn 0.4s ease-out;
+  animation-fill-mode: both;
+}
+
+.book-card:nth-child(2),
+.col:nth-child(2) {
+  animation-delay: 0.05s;
+}
+.book-card:nth-child(3),
+.col:nth-child(3) {
+  animation-delay: 0.1s;
+}
+.book-card:nth-child(4),
+.col:nth-child(4) {
+  animation-delay: 0.15s;
+}
+.book-card:nth-child(5),
+.col:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.book-card:nth-child(6),
+.col:nth-child(6) {
+  animation-delay: 0.25s;
+}
+.book-card:nth-child(7),
+.col:nth-child(7) {
+  animation-delay: 0.3s;
+}
+.book-card:nth-child(8),
+.col:nth-child(8) {
+  animation-delay: 0.35s;
+}
+.book-card:nth-child(9),
+.col:nth-child(9) {
+  animation-delay: 0.4s;
+}
+.book-card:nth-child(10),
+.col:nth-child(10) {
+  animation-delay: 0.45s;
+}
+
+/* Page transitions */
+.page-transition {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Loading animation */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .book-card .d-flex {
+    flex-direction: column;
+  }
+
+  .book-card .flex-shrink-0 {
+    margin-bottom: 1rem;
+    margin-right: 0 !important;
+  }
+}
+
+.fav-img {
+  width: 75%;
+  height: 80%;
+}
+
+.styleCard {
+  transition: transform 0.3s;
+}
+.styleCard:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.styleImg {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.multi-line-truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

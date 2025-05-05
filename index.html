@@ -1,65 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Explorer</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Font Awesome for icons -->
+<link rel="stylesheet" href="css/all.min.css">  
+<!--  CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#main-nav">
+  <!--==================== HOME ====================-->
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg stylefont" id="main-nav">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="fas fa-book-open me-2"></i>
+        <span class="fw-bold">Book Explorer</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav  d-flex justify-content-center align-items-center gap-3 ms-auto stylefont">
+          <li class="nav-item">
+            <a class="nav-link active" href="#" data-page="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#testimonal">Testimonal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="#" data-page="authors">Authors</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- Main Content Area -->
+    <main id="content-container">
+      <!-- Content will be loaded dynamically via JavaScript -->
+    </main>
+        <!--==================== Favorite ====================-->
+    <section class="container-fluid my-4 p-5" id="favorite">
+      <div class="row">
+        <!-- Img part -->
+        <div class="col-md-6 col-sm-12">
+          <div class="row photo-grid">
+            <!-- First image -->
+            <div class="col-6 mb-2">
+              <img
+                src="images/F1.jpeg"
+                alt="favorite1"
+                class="img-fluid fav-img rounded shadow"/>
+            </div>
 
-    <!--=============== FAVICON ===============-->
+            <!-- Second image -->
+            <div class="col-6 mb-2">
+              <img
+                src="images/F2.jpg"
+                alt="favorite2"
+                class="img-fluid fav-img rounded shadow"
+              />
+            </div>
 
-    <!--=============== REMIXICONS ===============-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+            <!-- Third image -->
+            <div class="col-6 mb-2">
+              <img
+                src="images/F3.jpg"
+                alt="favorite3"
+                class="img-fluid fav-img rounded shadow"
+              />
+            </div>
 
-    <!--=============== FONT AWESOME ===============-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+            <!-- Fourth image -->
+            <div class="col-6 mb-2">
+              <img
+                src="images/F4.jpg"
+                alt="favorite4"
+                class="img-fluid fav-img rounded shadow"
+              />
+            </div>
+          </div>
+        </div>
 
-    <!--=============== BOOTSTRAP CSS ===============-->
-    <link rel="stylesheet" href="assets/sass/bootstrap.css" />
+        <!-- Text part -->
+        <div class="col-md-6 col-sm-12 d-flex align-items-center">
+          <div class="p-2">
+            <h2 class="mb-3">Find Your Favorite Books Here</h2>
+            <p class="mb-4 text-muted">
+              Zenbook regularly publishes fascinating features about a huge
+              variety of bookish subjects, publishers, and interesting
+              characters in literature and notable anniversaries.
+            </p>
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/sass/style.css" />
+            <div class="row text-center mb-4">
+              <div class="col-4">
+                <h4 class="mb-0 fw-bold">80</h4>
+                <small class="text-muted">Books<br />Best Seller</small>
+              </div>
+              <div class="col-4">
+                <h4 class="mb-0 fw-bold">60</h4>
+                <small class="text-muted">Books<br />For Coming</small>
+              </div>
+              <div class="col-4">
+                <h4 class="mb-0 fw-bold">150</h4>
+                <small class="text-muted">Books<br />Total Products</small>
+              </div>
+            </div>
 
-    <title>Book Finder</title>
-  </head>
-  <body>
-    <!--==================== Nav ====================-->
-    <nav id="nav"></nav>
+            <a href="#" class="btn btn-outline-success"> Learn More </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!--==================== HOME ====================-->
-    <section id="home"></section>
+    <!--===================== BOOK FINDER =========================-->
+    <section id="BookFinder" class="container-fluid my-4">
+      <div class="row">
+        <h1 class="text-center m-4">FIND YOUR BOOK</h1>
 
-    <!--==================== BEST SELLER ====================-->
-    <section id="bestSeller"></section>
+        <!-- search -->
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center mb-4">
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control mb-4 w-50 "
+              placeholder="Search for books..."
+              style="height: 50px; border-radius: 20px; font-size: larger;"
+            />
+          </div>
+        </div>
 
-    <!--==================== Favorite ====================-->
-    <section id="favorite"></section>
+        <!-- cards -->
+        <div >
+          <div class="row" id="cardsRow"></div>
+        </div>
 
-    <!--===================== SHOP =========================-->
-    <section id="shop"></section>
-
+        <!-- pagination -->
+        <nav id="pagination" class="d-flex justify-content-center mt-4"></nav>
+      </div>
+    </section>
     <!--==================== TESTIMONIAL ====================-->
-    <section id="testimonal"></section>
+    <section id="testimonal">
+      <div class="container-fluid bg-body-tertiary py-5">
+        <h1 class="text-center">Our Customer</h1>
+        <div class="row justify-content-around">
+          <div class="col-md-3 p-3 shadow-lg rounded-2 ">
+            <div class="icons">
+              <ul class="d-flex list-unstyled gap-1 mt-3">
+                <li> <i class="fa-solid fa-star text-warning"></i></li>
+                <li> <i class="fa-solid fa-star text-warning"></i></li>
+                <li> <i class="fa-solid fa-star text-warning"></i></li>
+                <li> <i class="fa-solid fa-star text-warning"></i></li>
+                <li> <i class="fa-solid fa-star text-warning"></i></li>
+              </ul>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt voluptatum cumque odio. Tenetur labore beatae repellat eos! Dicta optio sit ab, recusandae delectus dolorem? Praesentium maiores autem rerum cum quae?</p>
+            <div class="d-flex">
+              <img src="images/profile.avif" alt="profile" class="img-fluid rounded-5 me-2" style="width: 35px; height:35px;">
+              <div class="">
+                <h5>Samaa Abdelmohsen</h5>
+                <h6>Front End Developer</h6>
+              </div>
+            </div>
 
-    <!--==================== FOOTER ====================-->
-    <footer></footer>
+          </div>
+          <div class="col-md-3 p-3 shadow-lg rounded-2 ">
+            <div class="icons">
+              <ul class="d-flex list-unstyled gap-1  mt-3">
+                <li> <i class="fa-solid fa-star text-warning"></i></li>
+                <li> <i class="fa-solid fa-star text-warning"></i></li>
+                <li> <i class="fa-solid fa-star text-warning"></i></li>
+                <li> <i class="fa-solid fa-star text-warning"></i></li>
+                <li> <i class="fa-solid fa-star text-warning"></i></li>
+              </ul>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt voluptatum cumque odio. Tenetur labore beatae repellat eos! Dicta optio sit ab, recusandae delectus dolorem? Praesentium maiores autem rerum cum quae?</p>
+            <div class="d-flex">
+              <img src="images/profile.avif" alt="profile" class="img-fluid rounded-5 me-2" style="width: 35px; height:35px;">
+              <div class="">
+                <h5>Kholud Ahmed</h5>
+                <h6>Front End Developer</h6>
+              </div>
+            </div>
 
-    <!--=============== POPPER ===============-->
-    <script src="assets/js/popper.js"></script>
+          </div>
+          <div class="col-md-3 p-3 shadow-lg rounded-2 ">
+            <div class="icons">
+              <ul class="d-flex list-unstyled gap-1 mt-3">
+                <li>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </li>
+                <li> <i class="fa-solid fa-star text-warning"></i></li>
+                <li> <i class="fa-solid fa-star text-warning"></i></i></li>
+                <li> <i class="fa-solid fa-star text-warning"></i></i></li>
+                <li> <i class="fa-solid fa-star text-warning"></i></i></li>
+              </ul>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt voluptatum cumque odio. Tenetur labore beatae repellat eos! Dicta optio sit ab, recusandae delectus dolorem? Praesentium maiores autem rerum cum quae?</p>
+            <div class="d-flex">
+              <img src="images/profile.avif" alt="profile" class="img-fluid rounded-5 me-2" style="width: 35px; height:35px;">
+              <div class="">
+                <h5>Mohammed Sayed</h5>
+                <h6>Front End Developer</h6>
+              </div>
+            </div>
 
-    <!--=============== JQUERY ===============-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          </div>
+        </div>
+      </div>
 
-    <!--=============== BOOTSTRAP JS ===============-->
-    <script src="assets/js/bootstrap.js"></script>
+      
+    </section>
+      <!--==================== FOOTER ====================-->
+      <footer>
+        <div class="container-fluid bg-light py-5">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="">
+                <img src="images/online-books-scaled.jpg" alt="online-books" class="img-fluid rounded-1">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="">
+                <h1 class="text-center mt-5">We Provide YOu The Experience</h1>
+                <h6 class="text-center mt-5">Browse the collection YOu need</h6>
+              </div>
+              <div class="text-center">
+                <a href="#" data-page="authors" class="btn btn-primary btn-lg px-4 py-2" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                  See Our Product
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row py-4">
+          <div class="col-3">
+            <div class="">
+              <h5 class="text-success text-center">About Us</h5>
+              <p class="text-center">Lorem, ipsum dolor.</p>
+              <p class="text-center">Lorem, ipsum dolor.</p>
+              <p class="text-center">Lorem, ipsum dolor.</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="">
+              <h5 class="text-success text-center">Help</h5>
+              <p class="text-center">Lorem, ipsum</p>
+              <p class="text-center">Lorem, ipsum</p>
+              <p class="text-center">Lorem, ipsum</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="">
+              <h5 class="text-success text-center">Secure Payment</h5>
+              <p class="text-center">Lorem, ipsum dolor.</p>
+              <p class="text-center">Lorem, ipsum dolor.</p>
+              <p class="text-center">Lorem, ipsum dolor.</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="">
+              <h5 class="text-success text-center">Social Networks</h5>
+              <ul class="list-unstyled p-1">
+                <li class="text-center"> <i class="ri-pinterest-line"></i> <a class="btn stylefont" href=""> Pinterest</a> </li>
+                <li class="text-center"> <i class="ri-facebook-fill"></i> <a class="btn stylefont" href=""> facebook</a> </li>
+                <li class="text-center"> <i class="ri-instagram-line"></i> <a class="btn stylefont" href=""> instagram</a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+  <!-- Bootstrap JS -->
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Application scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/authors.js"></script>
+  <script src="js/app.js"></script>
 
-    <!--=============== MAIN JS ===============-->
-  </body>
+    <!--=============== FIND BOOK JS ===============-->
+    <script src="js/findBook.js"></script>
+</body>
 </html>
