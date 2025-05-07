@@ -1,6 +1,6 @@
 /* glabal  styles */
 :root {
-  --primary-color: #b3907a;
+  --primary-color: #174c91;
   --secondary-color: #2c7be5;
   --text-color: #333;
   --light-bg: #f8f9fa;
@@ -25,11 +25,16 @@ p {
   font-size: 1.5rem !important;
 }
 
-.stylefont {
-  font-size: 1.5rem !important;
-  color: var(--text-color);
+.txt-nav
+{
+  font-size: 1.5rem;
 }
+.txt-nav:hover
+{
+  font-weight: 500;
+  font-size: 1.6rem;
 
+}
 .btn {
   font-size: 1.5rem !important;
   padding: 0.5rem 1rem !important;
@@ -48,6 +53,10 @@ main {
 footer {
   background-color: var(--primary-color);
   margin-top: auto;
+}
+
+.pointer{
+  cursor: pointer;
 }
 
 /* Hero section */
@@ -241,4 +250,17 @@ footer {
   -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.txt-fot
+{
+  color: #f8f9fa;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.txt-t
+{
+  color: #000000;
+  font-size: 1rem;
 }

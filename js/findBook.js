@@ -72,7 +72,7 @@ function createCard(book) {
 
   const categories = document.createElement("span");
   categories.textContent = book.categories.join(", ");
-  categories.classList.add("badge", "bg-success");
+  categories.classList.add("badge", "bg-primary");
   cardBody.appendChild(categories);
 
   card.appendChild(cardBody);
@@ -111,7 +111,7 @@ function renderPagination() {
   for (let i = 1; i <= totalPages; i++) {
     const btn = document.createElement("button");
     btn.textContent = i;
-    btn.classList.add("btn", "btn-outline-success", "mx-1");
+    btn.classList.add("btn", "btn-outline-primary", "mx-1");
 
     btn.addEventListener("click", () => {
       currentPage = i;

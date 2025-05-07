@@ -15,27 +15,30 @@
 <body data-bs-spy="scroll" data-bs-target="#main-nav">
   <!--==================== HOME ====================-->
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg stylefont" id="main-nav">
+  <nav class="navbar navbar-expand-lg lead fixed-top" id="main-nav">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <i class="fas fa-book-open me-2"></i>
-        <span class="fw-bold">Book Explorer</span>
+      <a class="navbar-brand d-flex  align-items-center" href="index.html">
+        <i class="fas fa-book-open text-white me-2"></i>
+        <span class="fw-bold text-white">Book Explorer</span>
       </a>
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon text-white"></span>
       </button>
       
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav  d-flex justify-content-center align-items-center gap-3 ms-auto stylefont">
+        <ul class="navbar-nav  d-flex justify-content-center align-items-center gap-3 ms-auto ">
           <li class="nav-item">
-            <a class="nav-link active" href="#" data-page="home">Home</a>
+            <a class="nav-link active text-white  txt-nav" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"  data-page="home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#testimonal">Testimonal</a>
+            <a class="nav-link  text-white  txt-nav" href="#favorite">Favorite</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="#" data-page="authors">Authors</a>
+            <a class="nav-link  text-white  txt-nav" href="#testimonal">Testimonal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white  txt-nav"  href="#"onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" data-page="authors">Authors</a>
           </li>
         </ul>
       </div>
@@ -113,7 +116,7 @@
               </div>
             </div>
 
-            <a href="#" class="btn btn-outline-success"> Learn More </a>
+            <a href="#" class="btn btn btn-primary lead"> Learn More </a>
           </div>
         </div>
       </div>
@@ -147,7 +150,7 @@
       </div>
     </section>
     <!--==================== TESTIMONIAL ====================-->
-    <section id="testimonal">
+    <section id="testimonal" class="mt-5">
       <div class="container-fluid bg-body-tertiary py-5">
         <h1 class="text-center">Our Customer</h1>
         <div class="row justify-content-around">
@@ -242,37 +245,43 @@
         </div>
   
         <div class="row py-4">
-          <div class="col-3">
+          <div class="col-md-3">
             <div class="">
-              <h5 class="text-success text-center">About Us</h5>
-              <p class="text-center">Lorem, ipsum dolor.</p>
-              <p class="text-center">Lorem, ipsum dolor.</p>
-              <p class="text-center">Lorem, ipsum dolor.</p>
+              <h5 class="txt-fot text-center">About Us</h5>
+              <ul class="list-unstyled text-center">
+                <li class="text-center txt-t  m-2">Curated selection of fiction, non-fiction, and academic books</li>
+                <li class="text-center txt-t m-2">Fast and reliable shipping</li>
+                <li class="text-center txt-t m-2">Affordable prices for all readers</li>
+              </ul>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-md-3">
             <div class="">
-              <h5 class="text-success text-center">Help</h5>
-              <p class="text-center">Lorem, ipsum</p>
-              <p class="text-center">Lorem, ipsum</p>
-              <p class="text-center">Lorem, ipsum</p>
+              <h5 class="txt-fot text-center">Help</h5>
+              <ul class="list-unstyled text-center">
+                <li class="text-center txt-t m-2">FAQs </li>
+                <li class="text-center txt-t  m-2">Shipping & Returns </li>
+                <li class="text-center txt-t  m-2">Customer Support </li>
+              </ul>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-md-3">
             <div class="">
-              <h5 class="text-success text-center">Secure Payment</h5>
-              <p class="text-center">Lorem, ipsum dolor.</p>
-              <p class="text-center">Lorem, ipsum dolor.</p>
-              <p class="text-center">Lorem, ipsum dolor.</p>
+              <h5 class="txt-fot text-center">Secure Payment</h5>
+              <ul class="list-unstyled">
+                <li class="text-center txt-t  m-2">100% Secure Checkout</li>
+                <li class="text-center txt-t  m-2">Multiple Payment Options</li>
+                <li class="text-center txt-t m-2">Encrypted Transactions</li>
+              </ul>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-md-3">
             <div class="">
-              <h5 class="text-success text-center">Social Networks</h5>
-              <ul class="list-unstyled p-1">
-                <li class="text-center"> <i class="ri-pinterest-line"></i> <a class="btn stylefont" href=""> Pinterest</a> </li>
-                <li class="text-center"> <i class="ri-facebook-fill"></i> <a class="btn stylefont" href=""> facebook</a> </li>
-                <li class="text-center"> <i class="ri-instagram-line"></i> <a class="btn stylefont" href=""> instagram</a> </li>
+              <h5 class="txt-fot text-center">Social Networks</h5>
+              <ul class="list-unstyled">
+                <li class="text-center txt-t m-2 pointer"> <i class="fa-brands fs-6 fa-pinterest"></i>  Pinterest </li>
+                <li class="text-center txt-t m-2 pointer"> <i class="fa-brands fs-6 fa-facebook"></i>  facebook </li>
+                <li class="text-center txt-t m-2 pointer"> <i class="fa-brands fs-6 fa-instagram"></i></i>  instagram </li>
               </ul>
             </div>
           </div>
@@ -287,9 +296,8 @@
   <script src="js/utils.js"></script>
   <script src="js/home.js"></script>
   <script src="js/authors.js"></script>
+      <!--=============== FIND BOOK JS ===============-->
+  <script src="js/findBook.js"></script>
   <script src="js/app.js"></script>
-
-    <!--=============== FIND BOOK JS ===============-->
-    <script src="js/findBook.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@ function initAuthorsPage() {
 
 function createAuthorsContent() {
   return `
-    <div class="authors-header py-5 text-center bg-light">
+    <div class="authors-header mt-3 py-5 text-center bg-light">
       <div class="container">
         <h1 class="display-5 fw-bold mb-3">Authors</h1>
         <p class="lead mb-4">Discover the authors of the Wings of Fire series</p>
